@@ -1,50 +1,50 @@
-$(function() {
-  $(".musicButton").on("click", function(event) {
+$(document).ready(function() {
+  $(".xxdropDown").change(function(selected) {
     //
-    //
-    event.preventDefault();
-    //
-    let mArtist = $("input[type='text']").val();
 
-    let splitName = mArtist.replace(/ /g, "+");
-    // $("input[type='text']").val("");
-    // console.log(mArtist);
-    // console.log(splitName);
+    let userSelected = $(".xxdropDown").val();
 
-    //  Use the on change method to grab the value of the user dropdown and save it as userSelection
-    //${userSelection}
-
-    // console.log(event);
+    // console.log(userSelected);
+    // alert("asdfasdf");
 
     $.ajax({
       dataType: "json",
       method: "GET",
-      url: `https://itunes.apple.com/search?entity=album&limit=6&term=l${splitName}`
+      url: `https://api.nytimes.com/svc/topstories/v2/${userSelected}.json?api-key=HxZYvgzO9JlxK5V2CK7GKd7i5WsBPHnI`
     })
-      //
-      .done(function({ results }) {
-        // deconstruction, must be the case sensitive property name
+
+      .done(function(data) {
         //
+        console.log(data); /* Show the while array */
+
         // jQuery array loop
-        // console.log(mData);
-        // console.log(mData.results[0].collectionName);
-        // console.log(mData.results[0].artistName);
-        // console.log(mData.results[0].artworkUrl100);
+        $.each(data.results, function(index, value) {
+          if (index > 11) return false;
 
-        $.each(results, function(index, value) {
-          let cName = value.collectionName;
-          let aName = value.artistName;
-          let aCover = value.artworkUrl100;
+          let nycImage = data.results[index].multimedia[3].url;
+          let nycAbstract = data.results[index].abstract;
+          console.log(nycAbstract, nycImage);
+          console.log(`${index}: ${value.title}`);
 
-          $(".album-list").append(
-            `<li> <img src="${aCover}"/img> </br> ${cName} </br> ${aName} </li>`
+          $(".nycArticles").append(
+            `<div class = "article" > 
+            <p>this is the abstract: ${nycAbstract} </p>
+            <a href="${nycImage}" > abc </a> 
+            </div>`
           );
         });
-      });
-    //
-    //end of listener
-  });
-});
+        //
 
-{
-}
+        //
+      })
+
+      .fail(function() {
+        alert("dhFail");
+      })
+
+      .always(function() {
+        console.log("Always...the end");
+      });
+  }); // end of dropDown listener
+  //
+}); // end of initial ready function
