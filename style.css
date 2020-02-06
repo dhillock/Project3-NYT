@@ -1,0 +1,17 @@
+body p {
+  background-color: black;
+  font-family: "Open Sans Light";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 10.5; /* 14px */
+  color: #2d2d2d;
+  margin: 0 4%;
+}
+
+.logo {
+  /* margin-left: 10px; */
+  background-color: black;
+  padding-left: 10px;
+  display: flex;
+  width: 45%;
+}
