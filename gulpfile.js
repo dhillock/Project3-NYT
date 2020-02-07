@@ -1,7 +1,10 @@
 const gulp = require("gulp");
 
 const terser = require("gulp-terser"),
-  rename = require("gulp-rename");
+  rename = require("gulp-rename"),
+  sass = require("gulp-sass"),
+  cssnano = require("gulp-cssnano"),
+  autoprefixer = require("gulp-autoprefixer");
 
 gulp.task("scripts", function(done) {
   return gulp
@@ -16,15 +19,11 @@ gulp.task("sass", function() {
   return (
     gulp
       // locates scss files
-      .src(".css/style.scss")
+      .src("./css/style.scss")
       // convedrrds sass to css
       .pipe(sass())
-      // adds prefixes for compatability
-      .pipe(
-        autoprefixes({
-          browsers: ["last 2 versions"]
-        })
-      )
+      // adds pcrefixes for compatability
+      .pipe(autoprefixer())
       // adds css to build dir
       .pipe(gulp.dest("./build/css"))
       //minifies our css
@@ -33,7 +32,7 @@ gulp.task("sass", function() {
       .pipe(rename("style.min.css"))
       //adds our final output to build dir
       .pipe(gulp.dest("./build/css"))
-      //syncs browser whenever a change is made and saved
-      .pipe(browseSync.stream())
+    //syncs browser whenever a change is made and saved
+    // .pipe(browseSync.stream())
   );
 });

@@ -1,0 +1,36 @@
+/* Mobile-first styling code */
+/* If the screen size is <= 599px */
+body p {
+  background-color: yellow;
+  font-family: "Open Sans Light";
+  /* font-family: "arial"; */
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0 4%; }
+
+p {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
+
+.logoContainer {
+  /* margin-left: 10px; */
+  background-color: black;
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 46%; }
+
+.theLogo {
+  width: 100px;
+  height: 100px; }

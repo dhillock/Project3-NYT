@@ -1,9 +1,9 @@
 //my style.scss
-* Mobile-first styling code */
+/* Mobile-first styling code */
 /* If the screen size is <= 599px */
 
 body p {
-  background-color: black;
+  background-color: yellow;
   font-family: "Open Sans Light";
   /* font-family: "arial"; */
   font-size: 16px;
@@ -24,7 +24,7 @@ p {
   display: flex;
   flex-direction: row;
   align-content: center;
-  width: 45%;
+  width: 46%;
 }
 .theLogo {
   width: 100px;
