@@ -1,0 +1,12 @@
+{
+  "name": "instanews",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dhillock/Project3-NYT.git",
+  "author": "David",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1"
+  }
+}
