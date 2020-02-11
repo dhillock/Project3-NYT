@@ -1,59 +1,82 @@
 $(document).ready(function() {
-  $(".xxdropDown").change(function(selected) {
-    //
+  //  $(".dropDown").change(function(selected) {
+  //
 
-    let userSelected = $(".xxdropDown").val();
+  let userSelected = $(".dropDown").val();
 
-    // console.log(userSelected);
-    // alert("asdfasdf");
+  userSelected = "books";
 
-    $.ajax({
-      dataType: "json",
-      method: "GET",
-      url: `https://api.nytimes.com/svc/topstories/v2/${userSelected}.json?api-key=HxZYvgzO9JlxK5V2CK7GKd7i5WsBPHnI`
+  // console.log(userSelected);
+  // alert("asdfasdf");
+
+  $.ajax({
+    dataType: "json",
+    method: "GET",
+    url: `https://api.nytimes.com/svc/topstories/v2/${userSelected}.json?api-key=HxZYvgzO9JlxK5V2CK7GKd7i5WsBPHnI`
+  })
+
+    .done(function(sectionData) {
+      //
+      console.log(sectionData); /* Show the while array */
+
+      // jQuery array loop
+      $.each(sectionData.results, function(index, value) {
+        if (index > 11) return false; // Want 12 news article
+
+        let nycImageUrl = value.multimedia[0].url;
+        let nycAbstract = value.abstract;
+        let nycArticleUrl = value.short_url;
+        // console.log(value);
+        // alert(nycImageUrl);
+
+        // <a href="${nycImageUrl}" > src ="./images/logo_w3s.gif" width="100 height="100 </a>
+        // console.log(nycAbstract, nycImage);
+        // console.log(nycImageUrl);
+        // console.log(nycAbstract);
+        // console.log(nycArticleUrl);
+        // console.log(`${index}: ${value.title}`);
+
+        $(".nycArticles").append(
+          //
+          `
+            <figure class = "figCell" > 
+
+            <a href="${nycArticleUrl}" target="new">  <img src ="${nycImageUrl}" >  
+
+                <p class="abstract"> ${nycAbstract} 
+                </p>
+            
+            </a> 
+
+            </figure>
+            `
+          //
+        );
+      });
+      //
+
+      //
     })
 
-      .done(function(data) {
-        //
-        console.log(data); /* Show the while array */
+    .fail(function() {
+      alert("dhFail");
+      // if (
+      //   userSelected === "--top stories--" ||
+      //   "--sections--" ||
+      //   "Sections..."
+      // ) {
+      //   event.preventDefault();
+      //   return;
+      // } else {
+      //   alert("failure to load.  Please try again.");
+      //   location.reload();
+      // }
+    })
 
-        // jQuery array loop
-        $.each(data.results, function(index, value) {
-          // if (index > 0) return false;
-
-          let nycImage = data.results[index].multimedia[3].url; // direct link to the image
-          let nycAbstract = data.results[index].abstract; // abstract terxt for the article
-          let nycUrl = data.results[index].url; // direct link to the article
-
-          console.log(nycAbstract, nycImage, nycUrl);
-          // console.log(`${index}: ${value.title}`);
-          // console.log(nycUrl);
-
-          $(".nycArticles").append(
-            `<div class = "article" > 
-            <p>this is the abstract: ${nycAbstract} 
-            </p>
-            <a 
-            href="${nycUrl}" 
-            > 
-            <img src = ${nycImage} 
-            /> 
-            </a>
-            </div>`
-          );
-        });
-        //
-
-        //
-      })
-
-      .fail(function() {
-        alert("dhFail");
-      })
-
-      .always(function() {
-        console.log("Always...the end");
-      });
-  }); // end of dropDown listener
+    .always(function() {
+      console.log("Always...the end");
+      // setTimeout(function(), 1000);
+    });
+  // }); // end of dropDown listener
   //
 }); // end of initial ready function

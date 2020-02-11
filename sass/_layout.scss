@@ -1,0 +1,105 @@
+//my style.scss
+/* Mobile-first styling code */
+/* If the screen size is <= 599px */
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../font/OpenSans-Light.eot");
+  src: url("../font/OpenSans-Light.eot?#iefix") format("embedded-opentype"),
+    url("../font/OpenSans-Light.woff2") format("woff2"),
+    url("../font/OpenSans-Light.woff") format("woff"),
+    url("../font/OpenSans-Light.ttf") format("truetype"),
+    url("../font/OpenSans-Light.svg#OpenSans-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+body,
+html {
+  background-color: black;
+  max-width: 1080px;
+  margin: 0 auto;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-style: normal;
+  text-align: center;
+  // margin: 0 auto;
+  //   text-align: center;
+}
+
+.choose {
+  background-color: orange;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropParent {
+  background-color: slateblue;
+  height: 100px;
+  padding-top: 50px;
+  // text-align: center;
+  // display: flex;
+}
+.dropDown {
+  background-color: red;
+  // margin-top: 25px;
+  font-size: small;
+}
+
+.logoContainer {
+  border: 1px solid red;
+  width: 100%;
+  height: 300px;
+  padding-top: 50px;
+  margin: 0 auto;
+}
+.theLogo {
+  width: 250px;
+  // margin: 0 auto;
+}
+
+.copyright {
+  background-color: pink;
+  height: 100px;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nycArticles {
+  // background-color: pink;
+  display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
+  // grid-template-rows: 300px;
+
+  // grid-template-rows: 5vw;
+  // gap: 1rem;
+  cursor: pointer;
+
+  .figCell {
+    // background-color: yellow;
+    position: relative;
+    // height: 300px;
+  }
+
+  .abstract {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    font-size: small;
+    color: #c2c2c2;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  img {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+  }
+} // end of nycArticles
