@@ -2,19 +2,87 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -23,58 +91,41 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block; }
 
 body {
   line-height: 1; }
 
-ol, ul {
+ol,
+ul {
   list-style: none; }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none; }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none; }
 
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.main2 {
-  background: green;
-  color: red; }
-
-.main {
-  height: 100px;
-  width: 100px;
-  background-color: #3366ff;
-  margin: 3em; }
-  @media (min-width: 320px) {
-    .main {
-      background-color: yellow; } }
-  @media (min-width: 780px) {
-    .main {
-      background-color: green; } }
-  .main p {
-    color: white;
-    font-family: "Open Sans"; }
-  .main:hover {
-    background: blue; }
-
-.main2 {
-  width: 200px;
-  height: 200px; }
-
-* {
-  border: 1px solid red; }
-
-/* Mobile-first styling code */
-/* If the screen size is <= 599px */
 @font-face {
   font-family: "Open Sans";
   src: url("../font/OpenSans-Light.eot");
@@ -93,6 +144,8 @@ html {
   font-style: normal;
   text-align: center; }
 
+/* Mobile-first styling code */
+/* If the screen size is <= 599px */
 .choose {
   background-color: orange;
   height: 100px;
@@ -141,7 +194,7 @@ html {
 
 .nycArticles {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   cursor: pointer; }
   .nycArticles .figCell {
     position: relative; }
@@ -158,3 +211,12 @@ html {
        object-fit: cover;
     height: 300px;
     width: 100%; }
+  .nycArticles:hover {
+    background: blue;
+    border-color: violet; }
+  @media (min-width: 380px) {
+    .nycArticles {
+      grid-template-columns: 1fr 1fr 1fr; } }
+  @media (min-width: 780px) {
+    .nycArticles {
+      grid-template-columns: 1fr 1fr 1fr 1fr; } }
