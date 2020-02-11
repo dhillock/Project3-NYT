@@ -107,12 +107,12 @@ html {
           align-items: center; }
 
 .dropParent {
-  background-color: slateblue;
+  background-color: blue;
   height: 100px;
   padding-top: 50px; }
 
 .dropDown {
-  background-color: red;
+  background-color: orange;
   font-size: small; }
 
 .logoContainer {
