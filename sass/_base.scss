@@ -143,6 +143,7 @@ table {
 
 //CUSTOM STYLES
 
+// Set SASS Variables
 $main-color: white;
 $font-main: "Open Sans";
 $font-weight: 300;
@@ -162,16 +163,14 @@ html {
   font-weight: $font-weight;
   font-style: $font-style;
   text-align: center;
-  // margin: 0 auto;
-  //   text-align: center;
 }
+// explore how this works
 %active {
   //   background: yellowgreen;
   color: red;
 }
 
 @mixin primary-links {
-  color: blue;
   text-decoration: underline;
 }
 

@@ -2,47 +2,43 @@
 /* Mobile-first styling code */
 /* If the screen size is <= 599px */
 
-.choose {
-  background-color: orange;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+header {
+  //
+  // background-color: coral;
+  .theLogo {
+    border: 1px solid red;
+    margin: 10%;
+    // width: 75%;
+  }
 
-.dropParent {
-  background-color: blue;
-  height: 100px;
-  padding-top: 50px;
-  // text-align: center;
-  // display: flex;
-}
-.dropDown {
-  background-color: orange;
-  // margin-top: 25px;
-  font-size: small;
-}
+  .dropDown {
+    background-color: chartreuse;
+    margin: 20px;
+  }
 
-.logoContainer {
-  border: 1px solid red;
-  width: 100%;
-  height: 300px;
-  padding-top: 50px;
-  margin: 0 auto;
-}
-.theLogo {
-  width: 250px;
-  // margin: 0 auto;
-}
+  @include tablet {
+    // width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  //
+  @include desktop {
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  } // end if the header class
 
-.copyright {
-  background-color: pink;
-  height: 100px;
-  font-size: small;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .copyright {
+    background-color: black;
+    height: 100px;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+} // end of the header
 
 .nycArticles {
   // background-color: pink;
@@ -55,7 +51,6 @@
   .figCell {
     // background-color: yellow;
     position: relative;
-    // height: 300px;
   }
 
   .abstract {
@@ -64,13 +59,14 @@
     padding: 1rem;
     font-size: small;
     color: #c2c2c2;
+    color: white;
     text-align: center;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.5);
   }
 
   img {
-    object-fit: cover;
-    height: 300px;
+    object-fit: cover; // this will clip the image, to fit.
+    // height: 300px;
     width: 100%;
   }
 
@@ -79,6 +75,7 @@
     background: blue;
     border-color: violet;
   }
+
   @include tablet {
     grid-template-columns: 1fr 1fr 1fr;
   }

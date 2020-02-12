@@ -4,10 +4,14 @@ $(document).ready(function() {
 
   let userSelected = $(".dropDown").val();
 
-  userSelected = "books";
+  const $waitingSpinner = $(".theSpinner").hide();
+
+  userSelected = "business";
 
   // console.log(userSelected);
   // alert("asdfasdf");
+
+  $waitingSpinner.show();
 
   $.ajax({
     dataType: "json",
@@ -59,6 +63,8 @@ $(document).ready(function() {
     })
 
     .fail(function() {
+      $waitingSpinner.hide();
+
       alert("dhFail");
       // if (
       //   userSelected === "--top stories--" ||
@@ -74,7 +80,10 @@ $(document).ready(function() {
     })
 
     .always(function() {
-      console.log("Always...the end");
+      // console.log("Always...the end");
+
+      $waitingSpinner.hide();
+      // alert($(document).outerHeight());
       // setTimeout(function(), 1000);
     });
   // }); // end of dropDown listener
