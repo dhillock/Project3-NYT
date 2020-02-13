@@ -1,0 +1,26 @@
+/* Mobile-first styling code */
+/* If the screen size is <= 599px */
+
+body p {
+  background-color: black;
+  font-family: "Open Sans Light";
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0 4%;
+}
+
+p {
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+}
+
+.logo {
+  /* margin-left: 10px; */
+  background-color: black;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  width: 45%;
+}
