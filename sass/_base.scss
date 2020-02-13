@@ -170,6 +170,7 @@ html {
   color: red;
 }
 
+// The mixin name can be anything you want. Then use that name when you calll with mixin with the @include
 @mixin primary-links {
   text-decoration: underline;
 }

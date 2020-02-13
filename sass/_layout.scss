@@ -4,6 +4,9 @@
 
 header {
   //
+  .theSpinner {
+    display: none;
+  }
   // background-color: coral;
   .theLogo {
     border: 1px solid red;
@@ -30,7 +33,7 @@ header {
     justify-content: flex-start;
   } // end if the header class
 
-  .copyright {
+  footer {
     background-color: black;
     height: 100px;
     font-size: small;
@@ -38,14 +41,14 @@ header {
     justify-content: center;
     align-items: center;
   }
-} // end of the header
+} // end of the header code
 
 .nycArticles {
-  // background-color: pink;
+  background-color: pink;
   display: grid;
   // grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-template-columns: 1fr;
-  // gap: 1rem;
+  gap: 1rem;
   cursor: pointer;
 
   .figCell {
@@ -83,4 +86,4 @@ header {
   @include desktop {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-} // end of nycArticles
+} // end of nycArticles code

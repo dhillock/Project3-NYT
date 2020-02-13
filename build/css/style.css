@@ -146,6 +146,9 @@ html {
 
 /* Mobile-first styling code */
 /* If the screen size is <= 599px */
+header .theSpinner {
+  display: none; }
+
 header .theLogo {
   border: 1px solid red;
   margin: 10%; }
@@ -179,7 +182,7 @@ header .dropDown {
         -ms-flex-pack: start;
             justify-content: flex-start; } }
 
-header .copyright {
+header footer {
   background-color: black;
   height: 100px;
   font-size: small;
@@ -194,8 +197,10 @@ header .copyright {
           align-items: center; }
 
 .nycArticles {
+  background-color: pink;
   display: grid;
   grid-template-columns: 1fr;
+  gap: 1rem;
   cursor: pointer; }
   .nycArticles .figCell {
     position: relative; }
