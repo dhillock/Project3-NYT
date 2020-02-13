@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <title>NYT Instanews</title>
-    <link rel="shortcut icon" href="NYT-favicon.png" />
+    <link rel="shortcut icon" href="./images/NYT-favicon.png" />
 
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./build/css/style.css" />
 
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap"
@@ -17,47 +17,66 @@
     />
   </head>
   <body>
-    <div class="logo">
-      <!-- <img src="images/nyt-logo.svg" /> -->
-      <object data="images/nyt-logo.svg" width="400" height="400"></object>
-    </div>
-    <select autofocus name="dropDown" class="xxdropDown">
-      <option value="sections">Sections...</option>
-      <option value="arts">Arts</option>
-      <option value="automobiles">Automobiles</option>
-      <option value="books">Books</option>
-      <option value="business">Business</option>
-      <option value="fashon">Fashon</option>
-      <option value="food">Food</option>
-      <option value="health">Healthe</option>
-      <option value="home">Home</option>
-      <option value="insider">Insider</option>
-      <option value="magazine">Magazine</option>
-      <option value="movies">Movies</option>
-      <option value="nyregion">NY Region</option>
-      <option value="obituaries">Obituaries</option>
-      <option value="opinion">Oinion</option>
-      <option value="politics">Politics</option>
-      <option value="realestate">Realestate</option>
-      <option value="science">Science</option>
-      <option value="sports">Sports</option>
-      <option value="sundayreview">Sunday Review</option>
-      <option value="technology">Technology</option>
-      <option value="theater">Theater</option>
-      <option value="t-magazine">T-Magazine</option>
-      <option value="travel">Travel</option>
-      <option value="upshot">Upshot</option>
-      <option value="us">USA</option>
-      <option value="world">World</option>
-    </select>
+    <header>
+      <!-- <div class="logoContainer"> -->
+      <object class="theLogo" data="images/nyt-logo.svg"></object>
+      <!-- </div> -->
+      <div class="chooseParent">
+        <p class="choose">Choose a section:</p>
+        <img
+          class="theSpinner"
+          src="./images/ajax-loader.gif"
+          alt="Waiting for data to load"
+          style="width:50px;height:50px;"
+        />
 
-    <div class="nycArticles"></div>
+        <select autofocus class="dropDown" style="width: 200px;">
+          <option value="sections">Sections...</option>
+          <option value="arts">Arts</option>
+          <option value="automobiles">Automobiles</option>
+          <option value="books">Books</option>
+          <option value="business">Business</option>
+          <option value="fashion">Fashion</option>
+          <option value="food">Food</option>
+          <option value="health">Health</option>
+          <option value="home">Home</option>
+          <option value="insider">Insider</option>
+          <option value="magazine">Magazine</option>
+          <option value="movies">Movies</option>
+          <option value="nyregion">NY Region</option>
+          <option value="obituaries">Obituaries</option>
+          <option value="opinion">Opinion</option>
+          <option value="politics">Politics</option>
+          <option value="realestate">Realestate</option>
+          <option value="science">Science</option>
+          <option value="sports">Sports</option>
+          <option value="sundayreview">Sunday Review</option>
+          <option value="technology">Technology</option>
+          <option value="theater">Theater</option>
+          <option value="t-magazine">T-Magazine</option>
+          <option value="travel">Travel</option>
+          <option value="upshot">Upshot</option>
+          <option value="us">USA</option>
+          <option value="world">World</option>
+        </select>
+      </div>
+    </header>
+    <!-- Articles will be injected here -->
+    <div class="nycArticles">
+      <!-- Put news items here -->
+    </div>
+
+    <footer class="copyright">
+      <p>
+        &copy; Copyright 2020 INSTANEWS
+      </p>
+    </footer>
 
     <script
       src="http://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
-    <script src="/js/app.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

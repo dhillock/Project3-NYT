@@ -1,0 +1,90 @@
+//my style.scss
+/* Mobile-first styling code */
+/* If the screen size is <= 599px */
+
+header {
+  //
+
+  .theSpinner {
+    display: none;
+  }
+  // background-color: coral;
+  .theLogo {
+    border: 1px solid red;
+    margin: 10%;
+    // width: 75%;
+  }
+
+  .dropDown {
+    background-color: chartreuse;
+    margin: 20px;
+  }
+
+  @include tablet {
+    // width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  //
+  @include desktop {
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  } // end if the header class
+
+  .copyright {
+    background-color: black;
+    height: 100px;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+} // end of the header
+
+.nycArticles {
+  // background-color: pink;
+  display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: 1fr;
+  // gap: 1rem;
+  cursor: pointer;
+
+  .figCell {
+    // background-color: yellow;
+    position: relative;
+  }
+
+  .abstract {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    font-size: small;
+    color: #c2c2c2;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  img {
+    object-fit: cover; // this will clip the image, to fit.
+    // height: 300px;
+    width: 100%;
+  }
+
+  // Hover is not working
+  &:hover {
+    background: blue;
+    border-color: violet;
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+} // end of nycArticles
