@@ -1,10 +1,10 @@
 {
-  "name": "instanews",
+  "name": "InstaNews",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "repository": "https://github.com/dhillock/Project3-NYT.git",
-  "author": "David",
-  "license": "MIT",
+  "author": "David Hillock",
+  "license": "Public Domain",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
