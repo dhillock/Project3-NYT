@@ -58,6 +58,7 @@ $(document).ready(function() {
             //
           );
         }); // end of the html build, for the 12 articles
+        //
         $waitingSpinner.hide();
       }) // end of the .done function
 
