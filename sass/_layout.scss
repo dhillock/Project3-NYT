@@ -8,47 +8,66 @@ header {
     display: none;
   }
   // background-color: coral;
+
+  .logoContainer {
+    border: 1px solid red;
+    width: 100%;
+    margin-top: 100px; // top and bottom margin
+    text-align: center;
+  }
+
   .theLogo {
-    // border: 1px solid red;
-    margin: 10%;
-    // width: 75%;
+    width: 200px;
+  }
+
+  .chooseParent {
+    border: 1px solid orange;
+    font-size: 1em;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .dropDown {
     // background-color: chartreuse;
+    // border: 1px solid orange;
     margin: 20px;
   }
 
+  // Modify the Header, for the tablet configuration
   @include tablet {
-    // width: 75%;
     display: flex;
     align-items: center;
-    justify-content: center;
-  }
-  //
-  @include desktop {
-    max-width: 1100px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  } // end if the header class
 
-  footer {
-    background-color: black;
-    height: 100px;
-    font-size: small;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .logoContainer {
+      padding-left: 8%;
+      width: 25%;
+      text-align: left;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    .chooseParent {
+      margin-top: -11px;
+    }
   }
-} // end of the header code
+  // modify the Header, for the desktop configuration
+  @include desktop {
+    //
+    // max-width: 1100px;
+    .logoContainer {
+      padding-left: 0;
+      width: 20%;
+    }
+  }
+} // end of the header class code
 
 .nycArticles {
   // background-color: pink;
   display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-template-columns: 1fr;
-  gap: 1rem;
+  // gap: 1rem;
   cursor: pointer;
 
   .figCell {
@@ -67,23 +86,38 @@ header {
     background: rgba(0, 0, 0, 0.5);
   }
 
-  img {
+  .articleImage {
     object-fit: cover; // this will clip the image, to fit.
-    // height: 300px;
+    height: 250px;
     width: 100%;
   }
 
   // Hover is not working
   &:hover {
     // background: blue;
-    // border-color: violet;
+    border-color: violet;
   }
+  // Modify the Articles, for the tablet configuration
 
   @include tablet {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  // Modify the Articles, for the desktop configuration
   @include desktop {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-} // end of nycArticles code
+} // end of nycArticles class code
+
+footer {
+  // background-color: green;
+  border: 1px solid yellow;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 0.9em;
+  @include desktop {
+    text-align: left;
+    padding-left: 20px;
+  }
+}

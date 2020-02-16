@@ -128,7 +128,9 @@ table {
   border-spacing: 0;
 }
 /////////////////////////// End of Resets /////////////////
+//
 // Set fonts
+//
 @font-face {
   font-family: "Open Sans";
   src: url("../font/OpenSans-Light.eot");
@@ -140,10 +142,9 @@ table {
   font-weight: 300;
   font-style: normal;
 }
-
-//CUSTOM STYLES
-
+//
 // Set SASS Variables
+//
 $main-color: black;
 $font-main: "Open Sans";
 $font-weight: 300;
@@ -152,17 +153,16 @@ $base-margin: 0 auto;
 $width-desktop: 780px;
 $width-tablet: 380px;
 
-//place holder...
 body,
 html {
   background-color: black;
-  max-width: 1080px;
+  // background-color: green;
+  max-width: 1250px;
   margin: $base-margin;
   color: white;
   font-family: $font-main;
   font-weight: $font-weight;
   font-style: $font-style;
-  text-align: center;
 }
 // explore how this works
 %active {
@@ -171,18 +171,19 @@ html {
 }
 
 // The mixin name can be anything you want. Then use that name when you calll with mixin with the @include
+
 @mixin primary-links {
   text-decoration: underline;
 }
 
 @mixin tablet {
   @media (min-width: $width-tablet) {
-    @content; // <--this line is required
+    @content;
   }
 }
 
 @mixin desktop {
   @media (min-width: $width-desktop) {
-    @content; // <--this line is required
+    @content;
   }
 }

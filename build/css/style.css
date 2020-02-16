@@ -136,21 +136,41 @@ table {
 body,
 html {
   background-color: black;
-  max-width: 1080px;
+  max-width: 1250px;
   margin: 0 auto;
   color: white;
   font-family: "Open Sans";
   font-weight: 300;
-  font-style: normal;
-  text-align: center; }
+  font-style: normal; }
 
 /* Mobile-first styling code */
 /* If the screen size is <= 599px */
 header .theSpinner {
   display: none; }
 
+header .logoContainer {
+  border: 1px solid red;
+  width: 100%;
+  margin-top: 100px;
+  text-align: center; }
+
 header .theLogo {
-  margin: 10%; }
+  width: 200px; }
+
+header .chooseParent {
+  border: 1px solid orange;
+  font-size: 1em;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 header .dropDown {
   margin: 20px; }
@@ -162,42 +182,24 @@ header .dropDown {
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; } }
+            align-items: center; }
+    header .logoContainer {
+      padding-left: 8%;
+      width: 25%;
+      text-align: left;
+      margin-top: 25px;
+      margin-bottom: 25px; }
+    header .chooseParent {
+      margin-top: -11px; } }
 
 @media (min-width: 780px) {
-  header {
-    max-width: 1100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; } }
-
-header footer {
-  background-color: black;
-  height: 100px;
-  font-size: small;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  header .logoContainer {
+    padding-left: 0;
+    width: 20%; } }
 
 .nycArticles {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
   cursor: pointer; }
   .nycArticles .figCell {
     position: relative; }
@@ -210,13 +212,27 @@ header footer {
     color: white;
     text-align: center;
     background: rgba(0, 0, 0, 0.5); }
-  .nycArticles img {
+  .nycArticles .articleImage {
     -o-object-fit: cover;
        object-fit: cover;
+    height: 250px;
     width: 100%; }
+  .nycArticles:hover {
+    border-color: violet; }
   @media (min-width: 380px) {
     .nycArticles {
       grid-template-columns: 1fr 1fr 1fr; } }
   @media (min-width: 780px) {
     .nycArticles {
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
+
+footer {
+  border: 1px solid yellow;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 0.9em; }
+  @media (min-width: 780px) {
+    footer {
+      text-align: left;
+      padding-left: 20px; } }

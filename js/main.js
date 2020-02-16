@@ -46,7 +46,7 @@ $(document).ready(function() {
             `
             <figure class = "figCell" > 
 
-            <a href="${nycArticleUrl}" target="new">  <img src ="${nycImageUrl}" >  
+            <a href="${nycArticleUrl}" target="new">  <img class = articleImage src ="${nycImageUrl}" >  
 
                 <p class="abstract"> ${nycAbstract} 
                 </p>
@@ -66,7 +66,9 @@ $(document).ready(function() {
         //
         $waitingSpinner.hide();
 
-        alert("dhFail");
+        alert(
+          "No data was loaded - Error Code: 26. \n Please choose another section."
+        );
       })
 
       .always(function() {
