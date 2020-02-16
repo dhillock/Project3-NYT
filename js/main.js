@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // $(".dropDown").chosen().change(selected) {
   $(".dropDown").change(function(selected) {
     //
 

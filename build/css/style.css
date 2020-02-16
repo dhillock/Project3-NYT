@@ -128,8 +128,8 @@ table {
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../font/OpenSans-Light.eot");
-  src: url("../font/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../font/OpenSans-Light.woff2") format("woff2"), url("../font/OpenSans-Light.woff") format("woff"), url("../font/OpenSans-Light.ttf") format("truetype"), url("../font/OpenSans-Light.svg#OpenSans-Light") format("svg");
+  src: url("../fonts/OpenSans-Light.eot");
+  src: url("../fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff"), url("../fonts/OpenSans-Light.ttf") format("truetype"), url("../fonts/OpenSans-Light.svg#OpenSans-Light") format("svg");
   font-weight: 300;
   font-style: normal; }
 
@@ -175,7 +175,7 @@ header .chooseParent {
 header .dropDown {
   margin: 20px; }
 
-@media (min-width: 380px) {
+@media (min-width: 600px) {
   header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -192,7 +192,7 @@ header .dropDown {
     header .chooseParent {
       margin-top: -11px; } }
 
-@media (min-width: 780px) {
+@media (min-width: 1240px) {
   header .logoContainer {
     padding-left: 0;
     width: 20%; } }
@@ -219,10 +219,10 @@ header .dropDown {
     width: 100%; }
   .nycArticles:hover {
     border-color: violet; }
-  @media (min-width: 380px) {
+  @media (min-width: 600px) {
     .nycArticles {
       grid-template-columns: 1fr 1fr 1fr; } }
-  @media (min-width: 780px) {
+  @media (min-width: 1240px) {
     .nycArticles {
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
@@ -232,7 +232,7 @@ footer {
   margin-bottom: 20px;
   text-align: center;
   font-size: 0.9em; }
-  @media (min-width: 780px) {
+  @media (min-width: 1240px) {
     footer {
       text-align: left;
       padding-left: 20px; } }

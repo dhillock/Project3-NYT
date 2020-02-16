@@ -133,12 +133,12 @@ table {
 //
 @font-face {
   font-family: "Open Sans";
-  src: url("../font/OpenSans-Light.eot");
-  src: url("../font/OpenSans-Light.eot?#iefix") format("embedded-opentype"),
-    url("../font/OpenSans-Light.woff2") format("woff2"),
-    url("../font/OpenSans-Light.woff") format("woff"),
-    url("../font/OpenSans-Light.ttf") format("truetype"),
-    url("../font/OpenSans-Light.svg#OpenSans-Light") format("svg");
+  src: url("../fonts/OpenSans-Light.eot");
+  src: url("../fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/OpenSans-Light.woff2") format("woff2"),
+    url("../fonts/OpenSans-Light.woff") format("woff"),
+    url("../fonts/OpenSans-Light.ttf") format("truetype"),
+    url("../fonts/OpenSans-Light.svg#OpenSans-Light") format("svg");
   font-weight: 300;
   font-style: normal;
 }
@@ -150,8 +150,8 @@ $font-main: "Open Sans";
 $font-weight: 300;
 $font-style: normal;
 $base-margin: 0 auto;
-$width-desktop: 780px;
-$width-tablet: 380px;
+$width-desktop: 1240px;
+$width-tablet: 600px;
 
 body,
 html {
@@ -166,7 +166,8 @@ html {
 }
 // explore how this works
 %active {
-  //   background: yellowgreen;
+  border: 3px solid red;
+  // background: yellowgreen;
   color: red;
 }
 
