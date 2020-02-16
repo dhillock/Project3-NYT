@@ -78,4 +78,4 @@ $(document).ready(function() {
       });
   }); // end of dropDown listener
   //
-}); // end of initial ready function
+}); // end of initial ready function.

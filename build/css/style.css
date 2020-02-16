@@ -150,11 +150,9 @@ header .theSpinner {
   display: none; }
 
 header .theLogo {
-  border: 1px solid red;
   margin: 10%; }
 
 header .dropDown {
-  background-color: chartreuse;
   margin: 20px; }
 
 @media (min-width: 380px) {
@@ -197,7 +195,6 @@ header footer {
           align-items: center; }
 
 .nycArticles {
-  background-color: pink;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -217,9 +214,6 @@ header footer {
     -o-object-fit: cover;
        object-fit: cover;
     width: 100%; }
-  .nycArticles:hover {
-    background: blue;
-    border-color: violet; }
   @media (min-width: 380px) {
     .nycArticles {
       grid-template-columns: 1fr 1fr 1fr; } }

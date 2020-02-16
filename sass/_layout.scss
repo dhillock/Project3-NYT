@@ -9,13 +9,13 @@ header {
   }
   // background-color: coral;
   .theLogo {
-    border: 1px solid red;
+    // border: 1px solid red;
     margin: 10%;
     // width: 75%;
   }
 
   .dropDown {
-    background-color: chartreuse;
+    // background-color: chartreuse;
     margin: 20px;
   }
 
@@ -44,7 +44,7 @@ header {
 } // end of the header code
 
 .nycArticles {
-  background-color: pink;
+  // background-color: pink;
   display: grid;
   // grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-template-columns: 1fr;
@@ -75,8 +75,8 @@ header {
 
   // Hover is not working
   &:hover {
-    background: blue;
-    border-color: violet;
+    // background: blue;
+    // border-color: violet;
   }
 
   @include tablet {
