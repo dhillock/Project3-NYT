@@ -149,7 +149,6 @@ header .theSpinner {
   display: none; }
 
 header .logoContainer {
-  border: 1px solid red;
   width: 100%;
   margin-top: 100px;
   text-align: center; }
@@ -158,7 +157,6 @@ header .theLogo {
   width: 200px; }
 
 header .chooseParent {
-  border: 1px solid orange;
   font-size: 1em;
   margin-top: 20px;
   display: -webkit-box;
@@ -227,7 +225,6 @@ header .dropDown {
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
 footer {
-  border: 1px solid yellow;
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
