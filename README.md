@@ -13,7 +13,7 @@ This project uses the following technology:
 
 - HTML
 - CSS, Grid
-- SASS (variables, mixins, and partials, nesting)
+- SASS (variables, mixins, nesting, and partials,)
 - Javascript
 - jQuery
 - Ajax/JSON
@@ -36,6 +36,10 @@ Besides learning how to use the technology listed above, this project allowed me
 style the parent tag, and only style the child(ren) tag(s) when required.
 
 Throughout this project, I had to re-style the website several times, because I never reviewed the requirements in detail, at the beginning of the project. It would have been better to spend an hour up-from, instead of spending hours re-styling.
+
+<H2 style='color:yellow'>Stretch Goals:</H2>
+
+The followign stretch-goals were included....
 
 <H2 style='color:yellow'>Install Information:</H2>
 
