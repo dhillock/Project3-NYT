@@ -39,7 +39,10 @@ Throughout this project, I had to re-style the website several times, because I 
 
 <H2 style='color:yellow'>Stretch Goals:</H2>
 
-The followign stretch-goals were included....
+The followign stretch-goals were included:
+
+- Installed 3rd-party drop-down box called Chosen
+- https://www.jqueryscript.net/form/User-Friendly-Input-Box-Plugin-Chosen.html
 
 <H2 style='color:yellow'>Install Information:</H2>
 

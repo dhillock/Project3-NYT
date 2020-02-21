@@ -170,7 +170,11 @@ header .chooseParent {
       -ms-flex-align: center;
           align-items: center; }
 
-header .dropDown {
+header .chooseParent p {
+  margin-bottom: 10px; }
+
+header .chzn-select {
+  background-color: chartreuse;
   margin: 20px; }
 
 @media (min-width: 600px) {

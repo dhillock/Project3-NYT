@@ -24,13 +24,18 @@ header {
     // border: 1px solid orange;
     font-size: 1em;
     margin-top: 20px;
+    // margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .dropDown {
-    // background-color: chartreuse;
+  .chooseParent p {
+    margin-bottom: 10px;
+  }
+
+  .chzn-select {
+    background-color: chartreuse;
     // border: 1px solid orange;
     margin: 20px;
   }

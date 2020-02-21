@@ -1,15 +1,15 @@
 $(document).ready(function() {
-  // $(".dropDown").chosen().change(selected) {
-  $(".dropDown").change(function(selected) {
+  //
+  $(".chzn-select").change(function(selected) {
     //
 
-    let userSelected = $(".dropDown").val();
+    let userSelected = $(".chzn-select").val();
 
     const $waitingSpinner = $(".theSpinner").show();
 
     // userSelected = "business";
 
-    // console.log(userSelected);
+    console.log(userSelected, $waitingSpinner);
     // alert("asdfasdf");
 
     $waitingSpinner.show();
@@ -74,10 +74,7 @@ $(document).ready(function() {
 
       .always(function() {
         // console.log("Always...the end");
-
         $waitingSpinner.hide();
-        // alert($(document).outerHeight());
-        // setTimeout(function(), 1000);
       });
   }); // end of dropDown listener
   //

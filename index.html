@@ -9,6 +9,8 @@
 
     <link rel="shortcut icon" href="./images/NYT-favicon.png" />
     <link rel="stylesheet" href="./build/css/style.min.css" />
+    <link rel="stylesheet" href="chosen/chosen.css" />
+
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap"
       rel="stylesheet"
@@ -32,8 +34,11 @@
           style="width:50px;height:50px;"
         />
 
-        <select autofocus class="dropDown" style="width: 200px;">
-          <option value="sections">Sections...</option>
+        <!-- <select autofocus class="dropDown" style="width: 200px;"> -->
+        <select class="chzn-select" data-placeholder="Sections...">
+          <!-- <option value="sections">Sections...</option> -->
+          <option></option>
+          // required for data-placeholder to work
           <option value="arts">Arts</option>
           <option value="automobiles">Automobiles</option>
           <option value="books">Books</option>
@@ -80,5 +85,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./build/js/main.min.js"></script>
+    <script src="chosen/chosen.jquery.js"></script>
   </body>
 </html>
