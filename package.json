@@ -1,6 +1,6 @@
 {
-  "name": "InstaNews",
-  "version": "1.0.0",
+  "name": "instanews",
+  "version": "1.1.0",
   "main": "main.js",
   "repository": "https://github.com/dhillock/Project3-NYT.git",
   "author": "David Hillock",

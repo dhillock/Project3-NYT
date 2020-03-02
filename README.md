@@ -49,6 +49,7 @@ The followign stretch-goals were included:
 Simply install all of the available files and folders in your root folder, using the folloing folder structure.
 
 - index.html
+- chosen
 - fonts
 - images
 - build
